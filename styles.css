@@ -235,3 +235,68 @@ header {
   #modal-body img { width: 100%; height: auto; max-height: 350px; }
   #modal-info { max-height: none; }
 }
+
+/* --- CSS responsive --- */
+@media (max-width: 720px) {
+  body {
+    padding: 10px;
+  }
+  #search-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  #search-input {
+    font-size: 1em;
+    padding: 10px 12px;
+  }
+
+  #anime-list-container {
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+
+  .anime-card img {
+    height: 180px;
+  }
+
+  #modal-content {
+    flex-direction: column;
+    max-width: 95%;
+    max-height: 90vh;
+  }
+
+  #modal-body {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  #modal-body img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+
+  #modal-info {
+    max-height: none;
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    font-size: 1.5em;
+  }
+  #search-input {
+    font-size: 0.9em;
+  }
+  #modal-info h2 {
+    font-size: 1.5em;
+  }
+  .anime-info h3 {
+    font-size: 1em;
+  }
+  #modal-rating {
+    font-size: 1.5em;
+  }
+}

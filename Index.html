@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lista Animes Terminados</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>Lista de Animes</header>
+
+<div id="search-container">
+  <div style="max-width: 600px; margin: 0 auto 20px; display: flex; gap: 10px;">
+    <button id="btn-export">Exportar lista</button>
+    <button id="btn-import">Importar lista</button>
+    <input type="file" id="input-import-file" accept=".json" style="display:none" />
+  </div>
+  <input type="text" id="search-input" placeholder="Busca un anime..." autocomplete="off" />
+  <div id="results"></div>
+</div>
+
+<div id="anime-list-container"></div>
+
+<!-- Modal -->
+<div id="modal">
+  <div id="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button id="modal-close" aria-label="Cerrar ventana">×</button>
+    <div id="modal-body">
+      <img id="modal-img" src="" alt="Imagen del anime" />
+      <div id="modal-info">
+        <h2 id="modal-title"></h2>
+        <p class="genres" id="modal-genres"></p>
+        <p id="modal-description"></p>
+        <button id="toggle-description">Ver más</button>
+        <p><strong>Capítulos:</strong> <span id="modal-episodes"></span></p>
+        <label>Puntuación:</label>
+        <div id="modal-rating">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+        <div id="modal-buttons">
+          <button id="btn-save">Guardar</button>
+          <button id="btn-delete">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

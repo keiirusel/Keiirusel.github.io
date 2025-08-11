@@ -300,3 +300,44 @@ header {
     font-size: 1.5em;
   }
 }
+
+/* Modal responsive mejorado */
+@media (max-width: 720px) {
+  #modal-content {
+    flex-direction: column !important;
+    max-width: 95% !important;
+    max-height: 90vh !important;
+    padding: 10px !important;
+  }
+
+  #modal-body {
+    flex-direction: column !important;
+    gap: 15px !important;
+    padding: 10px !important;
+    overflow-y: auto;
+    max-height: 80vh;
+  }
+
+  #modal-body img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 300px !important;
+    border-radius: 8px !important;
+  }
+
+  #modal-info {
+    max-height: none !important;
+    overflow-y: auto !important;
+    padding: 0 5px !important;
+  }
+
+  #modal-close {
+    position: fixed !important;
+    top: 15px !important;
+    right: 15px !important;
+    z-index: 9999 !important;
+    padding: 10px 15px !important;
+    font-size: 1.8em !important;
+    border-radius: 50% !important;
+  }
+}

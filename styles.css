@@ -83,7 +83,7 @@ header {
 
 /* Grid */
 #anime-list-container {
-  max-width: 1000px;
+  max-width: 720px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(180px,1fr));

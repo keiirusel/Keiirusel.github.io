@@ -648,3 +648,75 @@ header {
     font-size: 1.5em;
   }
 }
+
+/* fijacion de los botos de guardar y eliminar */
+@media (max-width: 720px) {
+  #modal-content {
+    flex-direction: column !important;
+    max-width: 95vw !important;
+    max-height: 90vh !important;
+    padding: 10px !important;
+    box-sizing: border-box;
+    display: flex !important;
+    flex-wrap: nowrap;
+  }
+
+  /* Contenedor con scroll para imagen + info */
+  #modal-body {
+    flex: 1 1 auto !important;
+    overflow-y: auto;
+    max-height: calc(90vh - 70px); /* dejando espacio para botones */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    padding: 10px !important;
+  }
+  #modal-body::-webkit-scrollbar {
+    display: none;
+  }
+
+  #modal-body img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 300px !important;
+    border-radius: 8px !important;
+    object-fit: contain !important;
+    background: #111;
+  }
+
+  #modal-info {
+    overflow-y: visible !important;
+    padding: 0 5px !important;
+  }
+
+  /* Botones siempre visibles fijos al fondo */
+  #modal-buttons {
+    flex-shrink: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    padding: 10px 0 0 0 !important;
+  }
+
+  #modal-buttons button {
+    flex: 1 1 auto !important;
+    padding: 10px !important;
+    font-size: 1em !important;
+  }
+
+  /* Botón cerrar fijo arriba derecha */
+  #modal-close {
+    position: fixed !important;
+    top: 15px !important;
+    right: 15px !important;
+    z-index: 9999 !important;
+    padding: 10px 15px !important;
+    font-size: 1.8em !important;
+    border-radius: 50% !important;
+    background: #ff6600 !important;
+    color: white !important;
+    cursor: pointer;
+  }
+}

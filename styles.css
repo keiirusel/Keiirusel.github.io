@@ -341,3 +341,65 @@ header {
     border-radius: 50% !important;
   }
 }
+
+@media (max-width: 720px) {
+  /* Modal general: tamaño máximo y diseño vertical */
+  #modal-content {
+    flex-direction: column !important;
+    max-width: 95vw !important;  /* ancho máximo según la ventana */
+    max-height: 90vh !important; /* alto máximo según la ventana */
+    padding: 10px !important;
+    box-sizing: border-box;
+  }
+
+  /* Contenido dentro del modal con scroll si es necesario */
+  #modal-body {
+    flex-direction: column !important;
+    gap: 15px !important;
+    padding: 10px !important;
+    max-height: 75vh; /* deja espacio para botón cerrar */
+    overflow-y: auto; /* scroll vertical si se pasa */
+  }
+
+  /* Imagen adaptada */
+  #modal-body img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 300px !important;
+    border-radius: 8px !important;
+  }
+
+  /* Área de info con scroll si es mucha info */
+  #modal-info {
+    max-height: none !important;
+    overflow-y: auto !important;
+    padding: 0 5px !important;
+  }
+
+  /* Botón cerrar siempre visible y accesible */
+  #modal-close {
+    position: fixed !important;
+    top: 15px !important;
+    right: 15px !important;
+    z-index: 9999 !important;
+    padding: 10px 15px !important;
+    font-size: 1.8em !important;
+    border-radius: 50% !important;
+    background: #ff6600 !important;
+    color: white !important;
+  }
+
+  /* Botones guardar y eliminar visibles */
+  #modal-buttons {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    margin-top: 10px !important;
+  }
+
+  #modal-buttons button {
+    flex: 1 1 auto !important;
+    padding: 10px !important;
+    font-size: 1em !important;
+  }
+}
